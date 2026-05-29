@@ -1,0 +1,312 @@
+body{
+    display: grid;
+    grid-template-columns: 200px auto;
+    padding: 0px;
+    margin: 0;
+    height: 100vh;
+}
+
+body .layout{
+    display: grid;
+    grid-template-rows: 45px auto;
+    min-height: AUTO;
+}
+
+nav{
+    background-color: blue;
+    position:sticky;
+    top:0;
+    height: 120vh;
+}
+
+nav button{
+    width: 100%;
+    background-color: rgb(0, 0, 255);
+    color:white;
+    border:none;
+    padding:10px;
+    margin:0px;
+    font-weight: bold;
+}
+
+nav button:hover{
+    cursor:pointer;
+    background-color: rgb(25, 0, 188);
+}
+
+.logo{
+    justify-content: center;
+    background-color: aqua;
+}
+
+.actionbar{
+    display:flex;
+    justify-content:space-between;
+    background-color: grey;
+    padding: 0px 30px;
+    color:white;
+    position: sticky;
+}
+
+.user{
+    display: inline-block;
+}
+
+.actionbar button{
+    background-color: rgb(221, 221, 221);
+    border:none;
+    font-weight: bold;
+    cursor:pointer;
+    height: 30px;
+    margin: 5px;
+}
+.logo:hover{
+    cursor:pointer;
+}
+
+.mainpage{
+    padding: 20px 40px 60px 40px;
+    height: 115vh;
+}
+
+.vyhledavac{
+    font-size: 18px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    padding: 5px;
+}
+
+.table{
+    background-color: white;
+    height: 90vh;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+/*******************************/
+
+.mainpage .novy_produkt input, .novy_produkt select,.vstup{
+    box-sizing: border-box;
+    height: 45px;
+    width: 400px;
+    font-size: 18px;
+    border: 1px solid #777;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    box-sizing: border-box;
+    border: 1px solid #777;
+    width: 400px;
+    height: 100px;
+
+}
+
+form .container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+form div div{
+    min-width: 500px;
+}
+
+.ulozit{
+    background-color: green;
+    color:white;
+    padding:10px;
+    font-size: 15px;
+    border:none;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.zrusit{
+    background-color: red;
+    color:white;
+    padding:10px;
+    font-size: 15px;
+    border:none;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+.vypis{
+    width: 100%;
+}
+
+td{
+    padding: 20px 10px;
+}
+
+.cena,.dph,.mnozstvi,.prodano{
+    width: 90px;
+}
+
+.cena,.dph,.mnozstvi,.prodano,.ean,.plu{
+    text-align: center;
+}
+
+.plu{
+    width: 70px;
+}
+.ean{
+    width: 120px;
+}
+
+tr{
+    outline: 1px solid black;
+}
+
+th{
+    border: 1px solid black;
+}
+
+table{
+    margin-top: 20px;
+}
+
+.stav{
+    width:120px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pagination{
+    margin-top: 10px;
+}
+
+.kategorie_tab{
+    width: 200px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.nazev{
+    width: 500px;
+}
+
+.akce{
+    width: 100%;
+}
+
+.prijem
+{
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgb(106, 255, 95);
+    padding: 3px;
+}
+
+.cislo{
+    width: 50px;
+    margin: 0px 10px;
+}
+
+.nasklad{
+    padding:4px;
+    margin-left: 10px;
+}
+
+.vydej{
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: rgb(255, 95, 95);
+    padding: 3px;
+}
+
+.historie{
+    width: 100%;
+    outline: none;
+}
+
+.ostatni{
+    text-align: center;
+    border: none;
+}
+
+.nazev2{
+    min-width: 150px;
+    padding: 20px;
+}
+
+.vydano{
+background-color: rgb(255, 201, 201);
+}
+
+.pridano{
+    background-color: rgb(201, 255, 201);
+}
+
+.pridalose{
+    background-color: rgb(179, 244, 255);
+}
+.odstraneni{
+    background-color: rgb(249, 216, 154);
+}
+
+.page{
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px 7px;
+}
+
+.pagination a{
+    margin: 5px;
+}
+
+.top_historie{
+    display:flex;
+    justify-content: space-between;
+}
+
+.top_historie .pagination{
+    margin-top: 40px;
+    margin-right: 10px;
+}
+
+.footer{
+    padding: 10px;
+    display:flex;
+    justify-content: center;
+}
+
+.tabulka_kategorii{
+    display: flex;
+    align-items: flex-start;
+}
+
+.kategorie_tab{
+    margin-right: 30px;
+}
+
+.top_kategorie{
+    display: flex;
+}
+
+.top_kategorie .pagination
+{
+    margin-left: 50px;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+}

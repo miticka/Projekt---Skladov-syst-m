@@ -43,7 +43,7 @@ $_SESSION["action"]="vydej";
                         $kategorie=$_SESSION["kategorie"];
                         $filtr=$_SESSION["filtr"];
                         $page=$_SESSION["page"];
-                        $off=($page-1)*10;
+                        $off=((int)$page-1)*10;
 
                         $sql="SELECT * FROM produkty WHERE 1 ";
                         if($search!="")
@@ -60,12 +60,9 @@ $_SESSION["action"]="vydej";
                         $i=$_SESSION["page"];
                         $a=1;
 
-                        $i=$_SESSION["page"];
-                        $a=1;
-
                         while($a<=$pocet)
                         {   
-                            echo"<a href=".$_SESSION["action"].".php?page=".$a;
+                            echo"<a href=".$_SESSION["action"].".php?page=".$a."&search=".$search."&filtr=".$filtr."&kategorie=".$kategorie;
                             if($a==$i)
                                 {echo" class='page'";}
                             echo">".$a."</a>";
@@ -172,7 +169,7 @@ $_SESSION["action"]="vydej";
                         $kategorie=$_SESSION["kategorie"];
                         $filtr=$_SESSION["filtr"];
                         $page=$_SESSION["page"];
-                        $off=($page-1)*10;
+                        $off=((int)$page-1)*10;
 
                         $sql="SELECT * FROM produkty WHERE 1 ";
                         if($search!="")
@@ -191,7 +188,7 @@ $_SESSION["action"]="vydej";
 
                         while($a<=$pocet)
                         {   
-                            echo"<a href=".$_SESSION["action"].".php?page=".$a;
+                            echo"<a href=".$_SESSION["action"].".php?page=".$a."&search=".$search."&filtr=".$filtr."&kategorie=".$kategorie;
                             if($a==$i)
                                 {echo" class='page'";}
                             echo">".$a."</a>";

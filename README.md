@@ -19,7 +19,7 @@
 - MySQL
 
 4) Instalace
-- Po stažení je potřeba importovat sql soubor do databáze
+- Po stažení je potřeba importovat sql soubor do databáze, pro demonstraci lze použít soubor 'skladovy_system_all.sql', na kterém jsou předem vyplněná data
 - Nastavení připojení k databázi v souboru 'database.php'
 - Spuštění projektu na lokálním serveru
 

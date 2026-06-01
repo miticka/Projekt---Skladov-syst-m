@@ -5,6 +5,9 @@ if(!isset($_SESSION["username"]))
     header("Location: login.php");
     exit;
     }
+
+if(!isset($_SESSION["zprava"]))
+    $_SESSION["zprava"] ="";
 ?>
 
 <!DOCTYPE html>

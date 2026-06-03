@@ -1,6 +1,12 @@
 <?php
 include("header.php");
 include("database.php");
+
+if($_SESSION["username"]!='admin')
+    {
+        $_SESSION["zprava"]="Nejsi admin!";
+        header("Location: index.php");
+    }
 ?>
 
         <section class="mainpage">

@@ -202,6 +202,7 @@ $_SESSION["action"]="prijem";
 include("footer.php");
 
 if($_SESSION["zprava"]!="")
-        echo '<script>alert("'.$_SESSION["zprava"].'")</script>';
-    $_SESSION["zprava"]="";
+    echo '<script>alert("'.$_SESSION["zprava"].'")</script>';
+$_SESSION["zprava"]="";
+$_SESSION["url"]=$_SERVER['REQUEST_URI'];
 ?>

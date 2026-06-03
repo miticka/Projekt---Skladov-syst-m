@@ -29,7 +29,7 @@
         <section class="mainpage">
             <h2>Nový produkt</h2>
             <div class="novy_produkt">
-                <form method="POST">
+                <form method="POST" action="update_produktu.php">
                 <div class="container">
                     <div>
                         <label for="jmeno_produktu">Název</label><br>

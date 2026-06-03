@@ -2,25 +2,25 @@
 include("database.php");
 session_start();
 
-$old = $_SESSION["nazev"];
+$old = $_SESSION["user"];
 $user = $_POST["user"];
 $heslo = $_POST["heslo1"];
 
-// kontrola duplicity
-$sql = "SELECT * FROM uzivatele WHERE username='$user' AND username!='$old'";
-$result = mysqli_query($conn, $sql);
+if($user!==$old)
+{
+    $sql = "SELECT * FROM uzivatele WHERE username='$user'";
+    $result = mysqli_query($conn, $sql);
 
-if (mysqli_num_rows($result) > 0) {
+    if (mysqli_num_rows($result) > 0) {
     $_SESSION["zprava"] = "Uživatel už existuje";
     header("Location: sprava_uzivatelu.php");
     exit;
+    }
 }
 
-// update username
 $sql = "UPDATE uzivatele SET username='$user' WHERE username='$old'";
 mysqli_query($conn, $sql);
 
-// update hesla
 if (!empty($heslo)) {
     $hash = password_hash($heslo, PASSWORD_DEFAULT);
 

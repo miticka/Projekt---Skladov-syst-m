@@ -161,6 +161,10 @@ td{
     width: 120px;
 }
 
+.stav{
+    width: 150px;
+}
+
 tr{
     outline: 1px solid black;
 }

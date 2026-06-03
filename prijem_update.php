@@ -28,5 +28,6 @@ mysqli_query($conn,$sql);
 else
     $_SESSION["zprava"]="Nesprávný vstup";
 
-header("Location:prijem.php");
+$url=$_SESSION["url"];
+header("Location:".$url);
 ?>

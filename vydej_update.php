@@ -41,6 +41,6 @@ else
 else
     $_SESSION["zprava"]="Nesprávný vstup";
 
-
-header("Location:vydej.php");
+$url=$_SESSION["url"];
+header("Location:".$url);
 ?>

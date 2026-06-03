@@ -1,5 +1,6 @@
 <?php
 include("header.php");
+include("database.php");
 $_SESSION["nazev"]=$_GET["nazev"];
 ?>
 
@@ -10,7 +11,12 @@ $_SESSION["nazev"]=$_GET["nazev"];
         <label for="nazev">Název kategorie</label><br>
         <input class="vstup" type="text" name="nazev_kategorie" id="nazev_kategorie"<?php echo"value='".$_SESSION["nazev"]."'"; ?>><br>
         <label for="popis">Popis</label><br>
-        <textarea id="popis" name="popis"></textarea><br>
+        <textarea id="popis" name="popis"><?php 
+        $nazev=$_SESSION['nazev']; 
+        $sql="SELECT * FROM kategorie WHERE `nazev`='$nazev'"; 
+        $result=mysqli_query($conn,$sql); $row=mysqli_fetch_assoc($result);
+        echo $row['popis'];
+        ?></textarea><br>
         <br>
 
         <button type="submit" class="ulozit">Uložit</button>
